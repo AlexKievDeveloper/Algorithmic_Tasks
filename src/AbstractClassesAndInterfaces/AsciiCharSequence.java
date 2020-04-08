@@ -14,5 +14,45 @@ package AbstractClassesAndInterfaces;
 
         P.S. В Java 9 ожидается подобная оптимизация в самом классе String: http://openjdk.java.net/jeps/254*/
 
-public class AsciiCharSequence {
-}
+
+    public class AsciiCharSequence implements CharSequence {
+        private byte[] array;
+
+        private AsciiCharSequence(byte[] array) {
+            this.array = array;
+        }
+
+        @Override
+        public int length() {
+            return array.length;
+        }
+
+        @Override
+        public char charAt(int index) {
+            char result = '0';
+            for (int i = 0; i <= index; i++) {
+                result = (char) array[i];
+            }
+            return result;
+        }
+
+        @Override
+        public String toString(){
+            char result = '0';
+            StringBuilder s = new StringBuilder();
+            for (byte b : array) {
+                result = (char) b;
+                s.append(result);
+            }
+            return s.toString();
+        }
+
+        @Override
+        public CharSequence subSequence(int start, int end) {
+            byte[] temp = new byte[end-start];
+            char result = '0';
+            if (end - start >= 0) System.arraycopy(array, start, temp, 0, end - start);
+            return new AsciiCharSequence(temp);
+        }
+    }
+
