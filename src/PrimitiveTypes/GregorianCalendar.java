@@ -14,8 +14,6 @@ package PrimitiveTypes;/*В Григорианском календаре год
 public class GregorianCalendar {
     public static int leapYearCount(int year) {
         int counter = 0;
-        int start = 0;
-
 
         for (int i = 1; i <= year; i++) {
             if (i % 4 == 0) {
@@ -29,5 +27,4 @@ public class GregorianCalendar {
         }
         return counter;
     }
-
 }

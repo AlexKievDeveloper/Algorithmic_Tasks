@@ -80,13 +80,13 @@ public class TryCatch {
                 robot.moveRobotTo(toX, toY);
                 step = 3;
             }
-            catch (RobotConnectionException r){
+            catch (RobotConnectionException robotException){
                 if (step == 2) {
                     throw new RobotConnectionException("RobotConnection problems. Try again");
                 }
             }
-            catch (Throwable e){
-                throw e;
+            catch (Throwable cause){
+                throw cause;
             }
         }
     }

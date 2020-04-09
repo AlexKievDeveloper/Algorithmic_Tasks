@@ -16,9 +16,8 @@ import java.util.Scanner;
 
     public class SystemInIntFix {
 
-        public static void main(String[] args) throws IOException {
+        public static void main(String[] args){
             Scanner scanner = new Scanner(System.in);
-            OutputStreamWriter streamWriter = new OutputStreamWriter(System.out);
 
             List<Integer> arrayList = new LinkedList<>();
 

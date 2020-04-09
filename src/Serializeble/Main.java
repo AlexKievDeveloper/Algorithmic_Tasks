@@ -52,7 +52,7 @@ public class Main {
     }
 
     public static Animal[] deserializeAnimalArray(byte[] bytes) {
-        Animal[] animals = new Animal[0];
+        Animal[] animals;
         try {
             ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bytes);
             ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream);

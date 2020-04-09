@@ -133,12 +133,12 @@ public class LastTask {
 
     public static void main(String[]args){
 // Random variables
-        String randomFrom="..."; // Некоторая случайная строка. Можете выбрать ее самостоятельно.
-        String randomTo="...";  // Некоторая случайная строка. Можете выбрать ее самостоятельно.
-        int randomSalary=100;  // Некоторое случайное целое положительное число. Можете выбрать его самостоятельно.
+        String randomFrom = "..."; // Некоторая случайная строка. Можете выбрать ее самостоятельно.
+        String randomTo = "...";  // Некоторая случайная строка. Можете выбрать ее самостоятельно.
+        int randomSalary = 100;  // Некоторое случайное целое положительное число. Можете выбрать его самостоятельно.
 
 // Создание списка из трех почтовых сообщений.
-        MailMessage firstMessage=new MailMessage(
+        MailMessage firstMessage = new MailMessage(
                 "Robert Howard",
                 "H.P. Lovecraft",
                 "This \"The Shadow over Innsmouth\" story is real masterpiece, Howard!"
@@ -148,13 +148,13 @@ public class LastTask {
         assert firstMessage.getTo().equals("H.P. Lovecraft"):"Wrong firstMessage to address";
         assert firstMessage.getContent().endsWith("Howard!"):"Wrong firstMessage content ending";
 
-        MailMessage secondMessage=new MailMessage(
+        MailMessage secondMessage = new MailMessage(
                 "Jonathan Nolan",
                 "Christopher Nolan",
                 "Брат, почему все так хвалят только тебя, когда практически все сценарии написал я. Так не честно!"
         );
 
-        MailMessage thirdMessage=new MailMessage(
+        MailMessage thirdMessage = new MailMessage(
                 "Stephen Hawking",
                 "Christopher Nolan",
                 "Я так и не понял Интерстеллар."
@@ -165,7 +165,7 @@ public class LastTask {
         );
 
 // Создание почтового сервиса.
-        MailService<String> mailService=new MailService<>();
+        MailService<String> mailService = new MailService<>();
 
 // Обработка списка писем почтовым сервисом
         messages.stream().forEachOrdered(mailService);

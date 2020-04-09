@@ -37,7 +37,6 @@ public class Test {
 public class StackTrace {
     public static String getCallerClassAndMethodName() {
         StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
-        String message = "";
 
         if (stackTraceElements.length > 3){
             StackTraceElement element = stackTraceElements[3];

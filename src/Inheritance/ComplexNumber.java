@@ -19,7 +19,7 @@ package Inheritance;
 
 import java.util.Objects;
 
-public class EqualsAndHashCodeOverrides {
+
     public final class ComplexNumber {
         private final double re;
         private final double im;
@@ -51,4 +51,4 @@ public class EqualsAndHashCodeOverrides {
             return Objects.hash(re, im);
         }
     }
-}
+
